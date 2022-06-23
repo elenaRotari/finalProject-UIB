@@ -1,0 +1,56 @@
+@use "./var";
+
+#aboutMe {
+  width: 100%;
+  padding: calc(var.$spacer * 1.5 + 4vw);
+  .aboutMe__block {
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    .grey__block {
+      grid-column: 1;
+      background-color: whitesmoke;
+      display: grid;
+      place-items: center;
+      .wave {
+        animation-name: wave-animation; /* Refers to the name of your @keyframes element below */
+        animation-duration: 2.5s; /* Change to speed up or slow down */
+        animation-iteration-count: infinite; /* Never stop waving :) */
+        transform-origin: 70% 70%; /* Pivot around the bottom-left palm */
+        display: inline-block;
+      }
+
+      @keyframes wave-animation {
+        0% {
+          transform: rotate(0deg);
+        }
+        10% {
+          transform: rotate(14deg);
+        }
+        20% {
+          transform: rotate(-8deg);
+        }
+        30% {
+          transform: rotate(14deg);
+        }
+        40% {
+          transform: rotate(-4deg);
+        }
+        50% {
+          transform: rotate(10deg);
+        }
+        60% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(0deg);
+        }
+      }
+    }
+  }
+  .darkgrey__block {
+    grid-column: 2;
+    background-color: var.$color;
+  }
+}

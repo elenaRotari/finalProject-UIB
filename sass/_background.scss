@@ -1,5 +1,6 @@
 .welcome,
-.loading {
+.loading,
+.aboutMe {
   height: 100vh;
   width: 100%;
   border-top: 1px solid white;
@@ -220,23 +221,3 @@
     }
   }
 }
-
-// .loading {
-//   display: flex;
-//   min-height: 100vh;
-//   background: rgb(91, 88, 90);
-//   background: radial-gradient(
-//     circle,
-//     rgba(91, 88, 90, 1) 0%,
-//     rgba(0, 0, 0, 1) 100%
-//   );
-//   -webkit-overflow-y: hidden;
-//   -moz-overflow-y: hidden;
-//   -o-overflow-y: hidden;
-//   overflow-y: hidden;
-//   -webkit-animation: fadeIn 1 1s ease-out;
-//   -moz-animation: fadeIn 1 1s ease-out;
-//   -o-animation: fadeIn 1 1s ease-out;
-//   animation: fadeIn 1 1s ease-out;
-//   z-index: 9999;
-// }

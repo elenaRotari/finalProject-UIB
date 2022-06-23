@@ -19,7 +19,8 @@ body {
 }
 
 .welcome,
-.loading {
+.loading,
+.aboutMe {
   height: 100vh;
   width: 100%;
   border-top: 1px solid white;
@@ -36,7 +37,8 @@ body {
   animation: fadeIn 1 1s ease-out;
 }
 .welcome .light,
-.loading .light {
+.loading .light,
+.aboutMe .light {
   width: 0px;
   opacity: 0.75;
   background-color: white;
@@ -50,7 +52,8 @@ body {
   position: absolute;
 }
 .welcome .x1,
-.loading .x1 {
+.loading .x1,
+.aboutMe .x1 {
   -webkit-animation: floatUp 4s infinite linear;
   -moz-animation: floatUp 4s infinite linear;
   -o-animation: floatUp 4s infinite linear;
@@ -61,7 +64,8 @@ body {
   transform: scale(1);
 }
 .welcome .x2,
-.loading .x2 {
+.loading .x2,
+.aboutMe .x2 {
   -webkit-animation: floatUp 7s infinite linear;
   -moz-animation: floatUp 7s infinite linear;
   -o-animation: floatUp 7s infinite linear;
@@ -73,7 +77,8 @@ body {
   left: 15%;
 }
 .welcome .x3,
-.loading .x3 {
+.loading .x3,
+.aboutMe .x3 {
   -webkit-animation: floatUp 2.5s infinite linear;
   -moz-animation: floatUp 2.5s infinite linear;
   -o-animation: floatUp 2.5s infinite linear;
@@ -85,7 +90,8 @@ body {
   left: -15%;
 }
 .welcome .x4,
-.loading .x4 {
+.loading .x4,
+.aboutMe .x4 {
   -webkit-animation: floatUp 4.5s infinite linear;
   -moz-animation: floatUp 4.5s infinite linear;
   -o-animation: floatUp 4.5s infinite linear;
@@ -97,7 +103,8 @@ body {
   left: -34%;
 }
 .welcome .x5,
-.loading .x5 {
+.loading .x5,
+.aboutMe .x5 {
   -webkit-animation: floatUp 8s infinite linear;
   -moz-animation: floatUp 8s infinite linear;
   -o-animation: floatUp 8s infinite linear;
@@ -109,7 +116,8 @@ body {
   left: -57%;
 }
 .welcome .x6,
-.loading .x6 {
+.loading .x6,
+.aboutMe .x6 {
   -webkit-animation: floatUp 3s infinite linear;
   -moz-animation: floatUp 3s infinite linear;
   -o-animation: floatUp 3s infinite linear;
@@ -121,7 +129,8 @@ body {
   left: -81%;
 }
 .welcome .x7,
-.loading .x7 {
+.loading .x7,
+.aboutMe .x7 {
   -webkit-animation: floatUp 5.3s infinite linear;
   -moz-animation: floatUp 5.3s infinite linear;
   -o-animation: floatUp 5.3s infinite linear;
@@ -133,7 +142,8 @@ body {
   left: 37%;
 }
 .welcome .x8,
-.loading .x8 {
+.loading .x8,
+.aboutMe .x8 {
   -webkit-animation: floatUp 4.7s infinite linear;
   -moz-animation: floatUp 4.7s infinite linear;
   -o-animation: floatUp 4.7s infinite linear;
@@ -145,7 +155,8 @@ body {
   left: 62%;
 }
 .welcome .x9,
-.loading .x9 {
+.loading .x9,
+.aboutMe .x9 {
   -webkit-animation: floatUp 4.1s infinite linear;
   -moz-animation: floatUp 4.1s infinite linear;
   -o-animation: floatUp 4.1s infinite linear;
@@ -324,7 +335,7 @@ body {
   align-items: center;
   justify-content: space-between;
   margin: 0 1rem;
-  margin-bottom: 5rem;
+  margin-bottom: 1rem;
 }
 .welcome .nav_Bar--img {
   width: 8rem;
@@ -355,8 +366,6 @@ body {
 .welcome .bars__kids {
   display: none;
   list-style-type: none;
-  right: 30px;
-  top: 230px;
 }
 @media (min-width: 40em) {
   .welcome .bars__kids {
@@ -365,7 +374,8 @@ body {
 }
 .welcome .bars__kids li {
   padding: calc(0.2rem + 1vw);
-  color: white;
+  color: rgba(243, 243, 243, 0.5);
+  font-weight: 600;
 }
 @media (min-width: 40em) {
   .welcome .bars__kids {
@@ -385,10 +395,13 @@ body {
   cursor: pointer;
 }
 .welcome .main {
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .welcome .main .main__welcomeText {
   display: none;
+  padding: calc(1rem + 2vw);
 }
 @media (min-width: 40em) {
   .welcome .main .main__welcomeText {
@@ -397,14 +410,12 @@ body {
 }
 .welcome .main .header {
   position: absolute;
-  width: 50%;
+  width: 100%;
   font-family: "Roboto", sans-serif;
   font-weight: 700;
   color: rgba(252, 249, 249, 0.5);
-  left: 50%;
-  transform: translateX(-50%);
-  margin-bottom: 2rem;
-  font-size: 2.6rem;
+  transform: translateY(-180%);
+  font-size: 2rem;
   text-shadow: 0 0 10px rgba(255, 255, 255, 0.2), 0 0 5px rgba(255, 255, 255, 0.2);
   text-align: center;
 }
@@ -612,23 +623,30 @@ body {
 .welcome .main .main__middleBlock {
   display: grid;
   place-items: center;
-  padding: calc(1rem + 4vw);
+  gap: 1rem;
+  padding: calc(1rem + 3vw);
 }
 @media (min-width: 40em) {
   .welcome .main .main__middleBlock {
-    grid-template-columns: 2fr 5fr;
+    grid-template-columns: 2fr 4fr;
   }
 }
 .welcome .main .main__middleBlock img {
   width: min(250px, 85%);
   aspect-ratio: 1;
   object-fit: cover;
-  margin-bottom: 5rem;
+  transform: rotateY(180deg);
 }
 @media (min-width: 40em) {
   .welcome .main .main__middleBlock img {
     width: 100%;
   }
+}
+.welcome .main .main__middleBlock .blockFlex {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: calc(1rem + 5vw);
 }
 .welcome .main .main__middleBlock .grid {
   display: grid;
@@ -641,8 +659,8 @@ body {
   transition: transform 350ms ease-in-out;
   overflow: hidden;
   text-align: center;
-  color: rgba(252, 249, 249, 0.5);
-  font-size: calc(1rem + 2vw);
+  color: rgba(243, 243, 243, 0.5);
+  font-size: calc(1rem + 4vw);
 }
 .welcome .main .main__middleBlock .grid a:hover {
   transform: scale(1.2);
@@ -657,6 +675,72 @@ body {
   .welcome .main .main__middleBlock .grid a {
     font-size: calc(2rem + 4vw);
   }
+}
+.welcome .main .footer__icon {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+}
+.welcome .main .footer__icon a {
+  color: rgba(243, 243, 243, 0.5);
+  font-size: calc(1rem + 1.5vw);
+}
+
+#aboutMe {
+  width: 100%;
+  padding: calc(1.5rem + 4vw);
+}
+#aboutMe .aboutMe__block {
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+}
+#aboutMe .aboutMe__block .grey__block {
+  grid-column: 1;
+  background-color: whitesmoke;
+  display: grid;
+  place-items: center;
+}
+#aboutMe .aboutMe__block .grey__block .wave {
+  animation-name: wave-animation; /* Refers to the name of your @keyframes element below */
+  animation-duration: 2.5s; /* Change to speed up or slow down */
+  animation-iteration-count: infinite; /* Never stop waving :) */
+  transform-origin: 70% 70%; /* Pivot around the bottom-left palm */
+  display: inline-block;
+}
+@keyframes wave-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(14deg);
+  }
+  20% {
+    transform: rotate(-8deg);
+  }
+  30% {
+    transform: rotate(14deg);
+  }
+  40% {
+    transform: rotate(-4deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  60% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+#aboutMe .darkgrey__block {
+  grid-column: 2;
+  background-color: rgba(243, 243, 243, 0.5);
 }
 
 /*# sourceMappingURL=style.css.map */
