@@ -691,25 +691,33 @@ body {
 
 #aboutMe {
   width: 100%;
-  padding: calc(1.5rem + 4vw);
+  padding: calc(1.5rem + 8vw);
 }
 #aboutMe .aboutMe__block {
   height: 100%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 1fr;
+  position: relative;
 }
 #aboutMe .aboutMe__block .grey__block {
   grid-column: 1;
   background-color: whitesmoke;
-  display: grid;
-  place-items: center;
+  display: flex;
+  flex-direction: column;
+  color: #555;
+}
+#aboutMe .aboutMe__block .grey__block h1 {
+  font-size: calc(0.3333333333rem + 2vw);
+}
+#aboutMe .aboutMe__block .grey__block p {
+  font-size: calc(0.3333333333rem + 1vw);
 }
 #aboutMe .aboutMe__block .grey__block .wave {
-  animation-name: wave-animation; /* Refers to the name of your @keyframes element below */
-  animation-duration: 2.5s; /* Change to speed up or slow down */
-  animation-iteration-count: infinite; /* Never stop waving :) */
-  transform-origin: 70% 70%; /* Pivot around the bottom-left palm */
+  animation-name: wave-animation;
+  animation-duration: 2.5s;
+  animation-iteration-count: infinite;
+  transform-origin: 70% 70%;
   display: inline-block;
 }
 @keyframes wave-animation {
@@ -741,6 +749,33 @@ body {
 #aboutMe .darkgrey__block {
   grid-column: 2;
   background-color: rgba(243, 243, 243, 0.5);
+  color: aliceblue;
+}
+#aboutMe .darkgrey__block .darkgrey__flexBlock {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10rem 2rem;
+  gap: calc(1rem + 2vw);
+}
+#aboutMe .darkgrey__block .darkgrey__flexBlock h1 {
+  font-size: calc(0.5rem + 2vw);
+  font-weight: 800;
+  text-align: center;
+}
+#aboutMe .darkgrey__block .darkgrey__flexBlock p {
+  font-size: calc(0.3333333333rem + 1vw);
+  text-align: end;
+}
+#aboutMe .middle__block {
+  position: absolute;
+  width: 100%;
+  top: 5%;
+  text-align: center;
+}
+#aboutMe .middle__block img {
+  width: min(90%, 450px);
 }
 
 /*# sourceMappingURL=style.css.map */
