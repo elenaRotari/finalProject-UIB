@@ -372,7 +372,7 @@ body {
     display: flex;
   }
 }
-.welcome .bars__kids li {
+.welcome .bars__kids a {
   padding: calc(0.2rem + 1vw);
   color: rgba(243, 243, 243, 0.5);
   font-weight: 600;
