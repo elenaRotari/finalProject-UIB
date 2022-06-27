@@ -20,7 +20,8 @@ body {
 
 .welcome,
 .loading,
-.aboutMe {
+.aboutMe,
+.contactMe {
   height: 100vh;
   width: 100%;
   border-top: 1px solid white;
@@ -38,7 +39,8 @@ body {
 }
 .welcome .light,
 .loading .light,
-.aboutMe .light {
+.aboutMe .light,
+.contactMe .light {
   width: 0px;
   opacity: 0.75;
   background-color: white;
@@ -53,7 +55,8 @@ body {
 }
 .welcome .x1,
 .loading .x1,
-.aboutMe .x1 {
+.aboutMe .x1,
+.contactMe .x1 {
   -webkit-animation: floatUp 4s infinite linear;
   -moz-animation: floatUp 4s infinite linear;
   -o-animation: floatUp 4s infinite linear;
@@ -65,7 +68,8 @@ body {
 }
 .welcome .x2,
 .loading .x2,
-.aboutMe .x2 {
+.aboutMe .x2,
+.contactMe .x2 {
   -webkit-animation: floatUp 7s infinite linear;
   -moz-animation: floatUp 7s infinite linear;
   -o-animation: floatUp 7s infinite linear;
@@ -78,7 +82,8 @@ body {
 }
 .welcome .x3,
 .loading .x3,
-.aboutMe .x3 {
+.aboutMe .x3,
+.contactMe .x3 {
   -webkit-animation: floatUp 2.5s infinite linear;
   -moz-animation: floatUp 2.5s infinite linear;
   -o-animation: floatUp 2.5s infinite linear;
@@ -91,7 +96,8 @@ body {
 }
 .welcome .x4,
 .loading .x4,
-.aboutMe .x4 {
+.aboutMe .x4,
+.contactMe .x4 {
   -webkit-animation: floatUp 4.5s infinite linear;
   -moz-animation: floatUp 4.5s infinite linear;
   -o-animation: floatUp 4.5s infinite linear;
@@ -104,7 +110,8 @@ body {
 }
 .welcome .x5,
 .loading .x5,
-.aboutMe .x5 {
+.aboutMe .x5,
+.contactMe .x5 {
   -webkit-animation: floatUp 8s infinite linear;
   -moz-animation: floatUp 8s infinite linear;
   -o-animation: floatUp 8s infinite linear;
@@ -117,7 +124,8 @@ body {
 }
 .welcome .x6,
 .loading .x6,
-.aboutMe .x6 {
+.aboutMe .x6,
+.contactMe .x6 {
   -webkit-animation: floatUp 3s infinite linear;
   -moz-animation: floatUp 3s infinite linear;
   -o-animation: floatUp 3s infinite linear;
@@ -130,7 +138,8 @@ body {
 }
 .welcome .x7,
 .loading .x7,
-.aboutMe .x7 {
+.aboutMe .x7,
+.contactMe .x7 {
   -webkit-animation: floatUp 5.3s infinite linear;
   -moz-animation: floatUp 5.3s infinite linear;
   -o-animation: floatUp 5.3s infinite linear;
@@ -143,7 +152,8 @@ body {
 }
 .welcome .x8,
 .loading .x8,
-.aboutMe .x8 {
+.aboutMe .x8,
+.contactMe .x8 {
   -webkit-animation: floatUp 4.7s infinite linear;
   -moz-animation: floatUp 4.7s infinite linear;
   -o-animation: floatUp 4.7s infinite linear;
@@ -156,7 +166,8 @@ body {
 }
 .welcome .x9,
 .loading .x9,
-.aboutMe .x9 {
+.aboutMe .x9,
+.contactMe .x9 {
   -webkit-animation: floatUp 4.1s infinite linear;
   -moz-animation: floatUp 4.1s infinite linear;
   -o-animation: floatUp 4.1s infinite linear;
@@ -690,30 +701,45 @@ body {
 }
 
 #aboutMe {
-  width: 100%;
   padding: calc(1.5rem + 8vw);
 }
 #aboutMe .aboutMe__block {
-  height: 100%;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 1fr;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+@media (min-width: 40em) {
+  #aboutMe .aboutMe__block {
+    flex-direction: row;
+  }
 }
 #aboutMe .aboutMe__block .grey__block {
-  grid-column: 1;
   background-color: whitesmoke;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   color: #555;
+  flex: 1;
 }
-#aboutMe .aboutMe__block .grey__block h1 {
+#aboutMe .aboutMe__block .grey__block .grey__flexBlock {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: calc(1rem + 2vw);
+  gap: calc(0.3333333333rem + 1.2vw);
+  width: 70%;
+}
+#aboutMe .aboutMe__block .grey__block .grey__flexBlock h1 {
   font-size: calc(0.3333333333rem + 2vw);
 }
-#aboutMe .aboutMe__block .grey__block p {
-  font-size: calc(0.3333333333rem + 1vw);
+#aboutMe .aboutMe__block .grey__block .grey__flexBlock p {
+  font-size: calc(0.5rem + 0.8vw);
+  text-align: center;
 }
-#aboutMe .aboutMe__block .grey__block .wave {
+#aboutMe .aboutMe__block .grey__block .grey__flexBlock .wave {
   animation-name: wave-animation;
   animation-duration: 2.5s;
   animation-iteration-count: infinite;
@@ -747,35 +773,52 @@ body {
   }
 }
 #aboutMe .darkgrey__block {
-  grid-column: 2;
   background-color: rgba(243, 243, 243, 0.5);
   color: aliceblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
 }
 #aboutMe .darkgrey__block .darkgrey__flexBlock {
   display: flex;
+  width: 70%;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 10rem 2rem;
+  padding: calc(1rem + 1vw);
   gap: calc(1rem + 2vw);
 }
 #aboutMe .darkgrey__block .darkgrey__flexBlock h1 {
-  font-size: calc(0.5rem + 2vw);
+  font-size: calc(1rem + 1.2vw);
   font-weight: 800;
   text-align: center;
 }
 #aboutMe .darkgrey__block .darkgrey__flexBlock p {
-  font-size: calc(0.3333333333rem + 1vw);
-  text-align: end;
+  font-size: calc(0.5rem + 0.8vw);
+  text-align: center;
+}
+#aboutMe .darkgrey__block .darkgrey__flexBlock p a {
+  color: #555;
+  font-weight: 900;
+  z-index: 9999;
 }
 #aboutMe .middle__block {
-  position: absolute;
-  width: 100%;
-  top: 5%;
   text-align: center;
 }
 #aboutMe .middle__block img {
-  width: min(90%, 450px);
+  display: none;
+  position: absolute;
+  width: min(40%, 350px);
+  filter: saturate(0);
+  top: 75%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+@media (min-width: 60em) {
+  #aboutMe .middle__block img {
+    display: block;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

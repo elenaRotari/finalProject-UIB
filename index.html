@@ -45,7 +45,7 @@
           <i class="fa-solid fa-bars"></i>
           <ul class="bars__kids">
             <li><a href="#aboutMe">About Me</a></li>
-            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contactMe">Contact</a></li>
           </ul>
         </label>
       </div>
@@ -65,25 +65,25 @@
               <a href="https://github.com/"
                 ><i class="fa-brands fa-github"></i
               ></a>
-              <a href="https://getbootstrap.com/"
+              <a href="https://getbootstrap.com/" target="_blank"
                 ><i class="fa-brands fa-bootstrap"></i
               ></a>
-              <a href="https://www.markdownguide.org/"
+              <a href="https://www.markdownguide.org/" target="_blank"
                 ><i class="fa-brands fa-markdown"></i
               ></a>
-              <a href="https://www.w3schools.com/html/"
+              <a href="https://www.w3schools.com/html/" target="_blank"
                 ><i class="fa-brands fa-html5"></i
               ></a>
-              <a href="https://www.w3schools.com/css/"
+              <a href="https://www.w3schools.com/css/" target="_blank"
                 ><i class="fa-brands fa-css3"></i
               ></a>
-              <a href="https://www.w3schools.com/js/"
+              <a href="https://www.w3schools.com/js/" target="_blank"
                 ><i class="fa-brands fa-js"></i
               ></a>
-              <a href="https://www.python.org/"
+              <a href="https://www.python.org/" target="_blank"
                 ><i class="fa-brands fa-python"></i
               ></a>
-              <a href="https://reactjs.org/"
+              <a href="https://reactjs.org/" target="_blank"
                 ><i class="fa-brands fa-react"></i
               ></a>
             </div>
@@ -93,13 +93,13 @@
           <a href="https://www.facebook.com/elena.rotary.16" target="_blank"
             ><i class="fa-brands fa-facebook-square"></i
           ></a>
-          <a href="https://www.instagram.com/ella_rotary/"
-            ><i class="fa-brands fa-instagram-square"></i
-          ></a>
-          <a href="https://github.com/elenaRotari"
+
+          <a href="https://github.com/elenaRotari" target="_blank"
             ><i class="fa-brands fa-github-square"></i
           ></a>
-          <a href="https://www.linkedin.com/feed/?trk=onboarding-landing"
+          <a
+            href="https://www.linkedin.com/feed/?trk=onboarding-landing"
+            target="_blank"
             ><i class="fa-brands fa-linkedin"></i
           ></a>
         </div>
@@ -117,22 +117,96 @@
     <section class="aboutMe" id="aboutMe">
       <div class="aboutMe__block">
         <div class="grey__block">
-          <h1>About Me</h1>
-          <p>Hello there,<span class="wave"> 👋</span>I am Elena</p>
+          <div class="grey__flexBlock">
+            <h1>My, myself & I</h1>
+            <p>
+              Hello there,<span class="wave"> 👋</span>I am Elena currently
+              located in Germany, but originally from Moldova. For almost 3
+              months I started a new adventure in the IT world in a wonderful
+              team, an adventure that daily inspires and motivates me.
+            </p>
+            <p>
+              Well-organized person, problem solver, independent employee with
+              high attention to detail. Fan of RBL, outdoor activities, TV
+              series and literature. A family person and mother of two sweets
+              girls.
+            </p>
+          </div>
         </div>
         <div class="darkgrey__block">
           <div class="darkgrey__flexBlock">
-            <h1>Experience</h1>
-            <p>In the process of study</p>
-            <p>Actualy no experience</p>
-            <p>Comming soon ...</p>
+            <h1>
+              Skills <br />& <br />
+              Experience
+            </h1>
+            <p>
+              I create successful responsive websites that are fast, easy to
+              use, and built with best practices. The main area of my expertise
+              is front-end development, HTML, CSS, JS, building small and medium
+              web apps, custom plugins, features, animations, and coding
+              interactive layouts.
+            </p>
+            <p>
+              Visit my
+              <a
+                href="https://www.linkedin.com/in/elena-rotari-45b330243/"
+                target="_blank"
+                >Linkedin</a
+              >
+              profile for more details or just contact me.
+            </p>
           </div>
         </div>
         <div class="middle__block">
-          <img src="./assets/My project.png" alt="2" />
+          <img src="./assets/my_middle_pic1.png" alt="2" />
         </div>
       </div>
     </section>
+    <section id="contactMe" class="contactMe"></section>
+    <form action="https://formspree.io/f/meqnvdee" method="post">
+      <div class="container">
+        <h2>Contact Me</h2>
+
+        <div>
+          <label>
+            Name:
+            <input type="text" name="name" placeholder="text Name" required />
+          </label>
+        </div>
+        <div>
+          <label>
+            Surname:
+            <input
+              type="text"
+              name="Surname"
+              placeholder="text Surname"
+              required
+            />
+          </label>
+        </div>
+        <br />
+        <div>
+          <label>
+            Age:
+            <input type="text" name="age" placeholder="age" required />
+          </label>
+        </div>
+        <div>
+          <label>
+            Your Message:
+            <textarea
+              name="wishes"
+              cols="25"
+              rows="10"
+              placeholder="text wishes"
+              required
+            ></textarea>
+          </label>
+        </div>
+
+        <button type="submit">Send</button>
+      </div>
+    </form>
 
     <script
       src="https://kit.fontawesome.com/c2a87afe28.js"

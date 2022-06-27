@@ -1,93 +1,123 @@
 @use "./var";
 
 #aboutMe {
-  width: 100%;
   padding: calc(var.$spacer * 1.5 + 8vw);
   .aboutMe__block {
-    height: 100%;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 1fr;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    @media (min-width: 40em) {
+      flex-direction: row;
+    }
     .grey__block {
-      grid-column: 1;
       background-color: whitesmoke;
       display: flex;
       flex-direction: column;
-
+      justify-content: center;
+      align-items: center;
       color: #555;
-      h1 {
-        font-size: calc(var.$spacer / 3 + 2vw);
-      }
-      p {
-        font-size: calc(var.$spacer/3 + 1vw);
-      }
-      .wave {
-        animation-name: wave-animation;
-        animation-duration: 2.5s;
-        animation-iteration-count: infinite;
-        transform-origin: 70% 70%;
-        display: inline-block;
-      }
+      flex: 1;
+      .grey__flexBlock {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: calc(var.$spacer + 2vw);
 
-      @keyframes wave-animation {
-        0% {
-          transform: rotate(0deg);
+        gap: calc(var.$spacer / 3 + 1.2vw);
+        width: 70%;
+        h1 {
+          font-size: calc(var.$spacer / 3 + 2vw);
         }
-        10% {
-          transform: rotate(14deg);
+        p {
+          font-size: calc(var.$spacer/2 + 0.8vw);
+          text-align: center;
         }
-        20% {
-          transform: rotate(-8deg);
+        .wave {
+          animation-name: wave-animation;
+          animation-duration: 2.5s;
+          animation-iteration-count: infinite;
+          transform-origin: 70% 70%;
+          display: inline-block;
         }
-        30% {
-          transform: rotate(14deg);
-        }
-        40% {
-          transform: rotate(-4deg);
-        }
-        50% {
-          transform: rotate(10deg);
-        }
-        60% {
-          transform: rotate(0deg);
-        }
-        100% {
-          transform: rotate(0deg);
+
+        @keyframes wave-animation {
+          0% {
+            transform: rotate(0deg);
+          }
+          10% {
+            transform: rotate(14deg);
+          }
+          20% {
+            transform: rotate(-8deg);
+          }
+          30% {
+            transform: rotate(14deg);
+          }
+          40% {
+            transform: rotate(-4deg);
+          }
+          50% {
+            transform: rotate(10deg);
+          }
+          60% {
+            transform: rotate(0deg);
+          }
+          100% {
+            transform: rotate(0deg);
+          }
         }
       }
     }
   }
   .darkgrey__block {
-    grid-column: 2;
     background-color: var.$color;
-
     color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
     .darkgrey__flexBlock {
       display: flex;
+      width: 70%;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      padding: 10rem 2rem;
+      padding: calc(var.$spacer + 1vw);
+
       gap: calc(var.$spacer + 2vw);
       h1 {
-        font-size: calc(var.$spacer / 2 + 2vw);
+        font-size: calc(var.$spacer + 1.2vw);
         font-weight: 800;
         text-align: center;
       }
       p {
-        font-size: calc(var.$spacer/3 + 1vw);
-        text-align: end;
+        font-size: calc(var.$spacer/2 + 0.8vw);
+        text-align: center;
+        a {
+          color: #555;
+          font-weight: 900;
+          z-index: 9999;
+        }
       }
     }
   }
   .middle__block {
-    position: absolute;
-    width: 100%;
-    top: 5%;
     text-align: center;
+
     img {
-      width: min(90%, 450px);
+      display: none;
+      position: absolute;
+      width: min(40%, 350px);
+      filter: saturate(0);
+      top: 75%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%);
+
+      @media (min-width: 60em) {
+        display: block;
+      }
     }
   }
 }
