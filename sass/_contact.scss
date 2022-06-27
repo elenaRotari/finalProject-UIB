@@ -1,0 +1,111 @@
+@use "./var";
+.contactMe {
+  padding: calc(var.$spacer * 1.5 + 8vw);
+  position: relative;
+  .contactMe__block {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    @media (min-width: 60em) {
+      flex-direction: row;
+    }
+    .gray__block {
+      display: none;
+      background-image: url(../assets/back.jpg);
+      background-size: cover;
+      position: relative;
+      background-position: center;
+      background-repeat: no-repeat;
+
+      // &::after {
+      //   // content: "\f041";
+      //   font-size: calc(var.$spacer * 1.5);
+      //   font-family: FontAwesome;
+      //   left: 44%;
+      //   top: 30%;
+      //   color: #c21807;
+      //   position: absolute;
+      // }
+
+      @media (min-width: 60em) {
+        display: block;
+        flex: 1;
+      }
+    }
+    .white__block {
+      background-color: whitesmoke;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: #555;
+      flex: 1;
+      .white__flexBlock {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: calc(var.$spacer + 1vw);
+        background-color: var.$color;
+        h2 {
+          margin-bottom: var.$spacer;
+          font-size: calc(var.$spacer * 2.3);
+        }
+
+        .row {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+
+          @media (min-width: 60em) {
+            flex-direction: row;
+          }
+          .row-1,
+          .row-2,
+          div {
+            width: 100%;
+          }
+          input,
+          select,
+          textarea {
+            padding: 0.8em;
+            width: 100%;
+            &:focus {
+              outline: none;
+            }
+          }
+          label {
+            font-size: 0.8rem;
+          }
+        }
+        button {
+          background-color: lightgrey;
+          margin: calc(var.$spacer * 1.3);
+          padding: 0.8em 3em;
+          border: none;
+          border-radius: calc(var.$spacer / 6);
+          font-weight: 900;
+          font-size: var.$spacer;
+          color: #555;
+          &:hover {
+            transform: scale(1.1);
+            transition: 1500ms;
+            border: none;
+            box-shadow: 0 0 10px #333;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+
+  .goHome {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}

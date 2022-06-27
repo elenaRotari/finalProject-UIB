@@ -1,13 +1,15 @@
 @use "./var";
 
-#aboutMe {
+.aboutMe {
   padding: calc(var.$spacer * 1.5 + 8vw);
+  position: relative;
+
   .aboutMe__block {
     position: relative;
     display: flex;
     flex-direction: column;
     min-height: 100%;
-    @media (min-width: 40em) {
+    @media (min-width: 60em) {
       flex-direction: row;
     }
     .grey__block {
@@ -23,7 +25,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        padding: calc(var.$spacer + 2vw);
+        padding: calc(var.$spacer/2 + 3vw);
 
         gap: calc(var.$spacer / 3 + 1.2vw);
         width: 70%;
@@ -84,7 +86,7 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      padding: calc(var.$spacer + 1vw);
+      padding: calc(var.$spacer / 2 + 3vw);
 
       gap: calc(var.$spacer + 2vw);
       h1 {
@@ -95,6 +97,13 @@
       p {
         font-size: calc(var.$spacer/2 + 0.8vw);
         text-align: center;
+        .will {
+          text-decoration: line-through;
+          &:hover {
+            text-decoration: none;
+            cursor: pointer;
+          }
+        }
         a {
           color: #555;
           font-weight: 900;
@@ -109,15 +118,25 @@
     img {
       display: none;
       position: absolute;
-      width: min(40%, 350px);
+      width: min(40%, 370px);
       filter: saturate(0);
-      top: 75%;
+      top: 69%;
       left: 50%;
       transform: translateX(-50%) translateY(-50%);
 
       @media (min-width: 60em) {
         display: block;
       }
+    }
+  }
+  .goHome {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    a {
+      background-color: var.$color;
+      padding: 0.5rem 3rem;
     }
   }
 }

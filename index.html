@@ -140,11 +140,11 @@
               Experience
             </h1>
             <p>
-              I create successful responsive websites that are fast, easy to
-              use, and built with best practices. The main area of my expertise
-              is front-end development, HTML, CSS, JS, building small and medium
-              web apps, custom plugins, features, animations, and coding
-              interactive layouts.
+              I <span class="will">will</span> create successful responsive
+              websites that are fast, easy to use, and built with best
+              practices. The main area of my expertise is front-end development,
+              HTML, CSS, JS, building small and medium web apps, custom plugins,
+              features, animations, and coding interactive layouts.
             </p>
             <p>
               Visit my
@@ -161,53 +161,103 @@
           <img src="./assets/my_middle_pic1.png" alt="2" />
         </div>
       </div>
+      <div class="goHome"><a href="#welcome">Home</a></div>
     </section>
-    <section id="contactMe" class="contactMe"></section>
-    <form action="https://formspree.io/f/meqnvdee" method="post">
-      <div class="container">
-        <h2>Contact Me</h2>
-
-        <div>
-          <label>
-            Name:
-            <input type="text" name="name" placeholder="text Name" required />
-          </label>
+    <section id="contactMe" class="contactMe">
+      <div class="contactMe__block">
+        <div class="gray__block">
+          <div></div>
         </div>
-        <div>
-          <label>
-            Surname:
-            <input
-              type="text"
-              name="Surname"
-              placeholder="text Surname"
-              required
-            />
-          </label>
+        <div class="white__block">
+          <form
+            class="white__flexBlock"
+            action="https://formspree.io/f/meqnvdee"
+            method="post"
+          >
+            <h2>Contact Me</h2>
+            <div class="row">
+              <div>
+                <div class="row">
+                  <div>
+                    <input type="text" placeholder="Name" autocomplete="off" />
+                  </div>
+                  <div>
+                    <input
+                      type="text"
+                      placeholder="Surname"
+                      autocomplete="off"
+                    />
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="row-1">
+                    <input
+                      type="text"
+                      placeholder="Company name"
+                      autocomplete="off"
+                    />
+                  </div>
+                </div>
+                <div class="row">
+                  <div>
+                    <input type="text" placeholder="Email" autocomplete="off" />
+                  </div>
+                  <div>
+                    <input
+                      type="text"
+                      placeholder="Telephone"
+                      autocomplete="off"
+                    />
+                  </div>
+                </div>
+                <div class="row">
+                  <div>
+                    <input
+                      type="text"
+                      placeholder="Address"
+                      autocomplete="off"
+                    />
+                  </div>
+                  <div>
+                    <input type="text" placeholder="City" autocomplete="off" />
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="row-2">
+                    <label
+                      >What do you need?
+                      <select>
+                        <option value="presentation">
+                          Presentation website
+                        </option>
+                        <option value="portfolio">Portfolio</option>
+                        <option value="app">Web or Mobile application</option>
+                        <option value="store">Online shop</option>
+                      </select>
+                    </label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="row-1">
+                    <textarea
+                      cols="25"
+                      rows="10"
+                      placeholder="Message to me "
+                    ></textarea>
+                  </div>
+                </div>
+                <div>
+                  <div>
+                    <button>Send</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
         </div>
-        <br />
-        <div>
-          <label>
-            Age:
-            <input type="text" name="age" placeholder="age" required />
-          </label>
-        </div>
-        <div>
-          <label>
-            Your Message:
-            <textarea
-              name="wishes"
-              cols="25"
-              rows="10"
-              placeholder="text wishes"
-              required
-            ></textarea>
-          </label>
-        </div>
-
-        <button type="submit">Send</button>
       </div>
-    </form>
-
+      <div class="goHome"><a href="#welcome">Home</a></div>
+    </section>
     <script
       src="https://kit.fontawesome.com/c2a87afe28.js"
       crossorigin="anonymous"
