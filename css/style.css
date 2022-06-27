@@ -774,7 +774,7 @@ body {
     transform: rotate(0deg);
   }
 }
-.aboutMe .darkgrey__block {
+.aboutMe .aboutMe__block .darkgrey__block {
   background-color: rgba(243, 243, 243, 0.5);
   color: aliceblue;
   display: flex;
@@ -782,7 +782,7 @@ body {
   align-items: center;
   flex: 1;
 }
-.aboutMe .darkgrey__block .darkgrey__flexBlock {
+.aboutMe .aboutMe__block .darkgrey__block .darkgrey__flexBlock {
   display: flex;
   width: 70%;
   flex-direction: column;
@@ -791,31 +791,31 @@ body {
   padding: calc(0.5rem + 3vw);
   gap: calc(1rem + 2vw);
 }
-.aboutMe .darkgrey__block .darkgrey__flexBlock h1 {
+.aboutMe .aboutMe__block .darkgrey__block .darkgrey__flexBlock h1 {
   font-size: calc(1rem + 1.2vw);
   font-weight: 800;
   text-align: center;
 }
-.aboutMe .darkgrey__block .darkgrey__flexBlock p {
+.aboutMe .aboutMe__block .darkgrey__block .darkgrey__flexBlock p {
   font-size: calc(0.5rem + 0.8vw);
   text-align: center;
 }
-.aboutMe .darkgrey__block .darkgrey__flexBlock p .will {
+.aboutMe .aboutMe__block .darkgrey__block .darkgrey__flexBlock p .will {
   text-decoration: line-through;
 }
-.aboutMe .darkgrey__block .darkgrey__flexBlock p .will:hover {
+.aboutMe .aboutMe__block .darkgrey__block .darkgrey__flexBlock p .will:hover {
   text-decoration: none;
   cursor: pointer;
 }
-.aboutMe .darkgrey__block .darkgrey__flexBlock p a {
+.aboutMe .aboutMe__block .darkgrey__block .darkgrey__flexBlock p a {
   color: #555;
   font-weight: 900;
   z-index: 9999;
 }
-.aboutMe .middle__block {
+.aboutMe .aboutMe__block .middle__block {
   text-align: center;
 }
-.aboutMe .middle__block img {
+.aboutMe .aboutMe__block .middle__block img {
   display: none;
   position: absolute;
   width: min(40%, 370px);
@@ -825,7 +825,7 @@ body {
   transform: translateX(-50%) translateY(-50%);
 }
 @media (min-width: 60em) {
-  .aboutMe .middle__block img {
+  .aboutMe .aboutMe__block .middle__block img {
     display: block;
   }
 }

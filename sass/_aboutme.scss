@@ -72,63 +72,64 @@
         }
       }
     }
-  }
-  .darkgrey__block {
-    background-color: var.$color;
-    color: aliceblue;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex: 1;
-    .darkgrey__flexBlock {
+    .darkgrey__block {
+      background-color: var.$color;
+      color: aliceblue;
       display: flex;
-      width: 70%;
-      flex-direction: column;
       justify-content: center;
       align-items: center;
-      padding: calc(var.$spacer / 2 + 3vw);
+      flex: 1;
+      .darkgrey__flexBlock {
+        display: flex;
+        width: 70%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: calc(var.$spacer / 2 + 3vw);
 
-      gap: calc(var.$spacer + 2vw);
-      h1 {
-        font-size: calc(var.$spacer + 1.2vw);
-        font-weight: 800;
-        text-align: center;
-      }
-      p {
-        font-size: calc(var.$spacer/2 + 0.8vw);
-        text-align: center;
-        .will {
-          text-decoration: line-through;
-          &:hover {
-            text-decoration: none;
-            cursor: pointer;
+        gap: calc(var.$spacer + 2vw);
+        h1 {
+          font-size: calc(var.$spacer + 1.2vw);
+          font-weight: 800;
+          text-align: center;
+        }
+        p {
+          font-size: calc(var.$spacer/2 + 0.8vw);
+          text-align: center;
+          .will {
+            text-decoration: line-through;
+            &:hover {
+              text-decoration: none;
+              cursor: pointer;
+            }
+          }
+          a {
+            color: #555;
+            font-weight: 900;
+            z-index: 9999;
           }
         }
-        a {
-          color: #555;
-          font-weight: 900;
-          z-index: 9999;
+      }
+    }
+    .middle__block {
+      text-align: center;
+
+      img {
+        display: none;
+        position: absolute;
+        width: min(40%, 370px);
+        filter: saturate(0);
+        top: 69%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+
+        @media (min-width: 60em) {
+          display: block;
         }
       }
     }
   }
-  .middle__block {
-    text-align: center;
 
-    img {
-      display: none;
-      position: absolute;
-      width: min(40%, 370px);
-      filter: saturate(0);
-      top: 69%;
-      left: 50%;
-      transform: translateX(-50%) translateY(-50%);
-
-      @media (min-width: 60em) {
-        display: block;
-      }
-    }
-  }
   .goHome {
     position: absolute;
     bottom: 5%;
