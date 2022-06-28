@@ -812,13 +812,10 @@ body {
   font-weight: 900;
   z-index: 9999;
 }
-.aboutMe .aboutMe__block .middle__block {
-  text-align: center;
-}
 .aboutMe .aboutMe__block .middle__block img {
   display: none;
   position: absolute;
-  width: min(40%, 350px);
+  width: min(40%, 330px);
   filter: saturate(0);
   top: 69%;
   left: 50%;

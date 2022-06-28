@@ -112,12 +112,10 @@
       }
     }
     .middle__block {
-      text-align: center;
-
       img {
         display: none;
         position: absolute;
-        width: min(40%, 350px);
+        width: min(40%, 330px);
         filter: saturate(0);
         top: 69%;
         left: 50%;
