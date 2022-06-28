@@ -104,8 +104,31 @@
 
   .goHome {
     position: absolute;
-    bottom: 5%;
+    bottom: 3%;
     left: 50%;
     transform: translateX(-50%);
+    @media (min-width: 40em) {
+      bottom: 5%;
+    }
+    @media (min-width: 60em) {
+      bottom: 7%;
+    }
+
+    a {
+      background-color: transparent;
+      padding: 0.5rem 2rem;
+      border: 2px solid white;
+      border-radius: calc(var.$spacer/3);
+      color: var.$color;
+      font-weight: 900;
+      font-size: calc(var.$spacer * 0.8);
+      box-shadow: 0 0 5px var.$color, inset 0 0 5px var.$color;
+      @media (min-width: 40em) {
+        padding: 0.5rem 3rem;
+      }
+      @media (min-width: 60em) {
+        padding: 0.5rem 5rem;
+      }
+    }
   }
 }

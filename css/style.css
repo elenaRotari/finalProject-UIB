@@ -316,7 +316,7 @@ body {
   font-family: "Roboto", sans-serif;
   color: white;
   padding: 0.5rem 3rem;
-  font-size: 2em;
+  font-size: calc(0.5rem + 1vw);
   border-radius: 5px;
   opacity: 0.5;
   margin: 0 auto;
@@ -332,7 +332,6 @@ body {
   transition: 0.9s;
   box-shadow: 0 8px 15px 0 rgba(255, 255, 255, 0.5);
 }
-
 @keyframes blur-text {
   0% {
     filter: blur(0px);
@@ -341,6 +340,7 @@ body {
     filter: blur(4px);
   }
 }
+
 .welcome .nav__Bar {
   display: flex;
   align-items: center;
@@ -348,61 +348,61 @@ body {
   margin: 0 1rem;
   margin-bottom: 1rem;
 }
-.welcome .nav_Bar--img {
+.welcome .nav__Bar .nav_Bar--img {
   width: 8rem;
 }
 @media (min-width: 40em) {
-  .welcome .nav_Bar--img {
+  .welcome .nav__Bar .nav_Bar--img {
     width: 9rem;
   }
 }
 @media (min-width: 60em) {
-  .welcome .nav_Bar--img {
+  .welcome .nav__Bar .nav_Bar--img {
     width: 10rem;
   }
 }
-.welcome .fa-bars {
+.welcome .nav__Bar .fa-bars {
   color: rgba(243, 243, 243, 0.5);
   font-size: 2rem;
   padding-right: 2rem;
 }
 @media (min-width: 40em) {
-  .welcome .fa-bars {
+  .welcome .nav__Bar .fa-bars {
     display: none;
   }
 }
-.welcome .bars__parent {
+.welcome .nav__Bar .bars__parent {
   position: relative;
 }
-.welcome .bars__kids {
+.welcome .nav__Bar .bars__kids {
   display: none;
   list-style-type: none;
 }
 @media (min-width: 40em) {
-  .welcome .bars__kids {
+  .welcome .nav__Bar .bars__kids {
     display: flex;
   }
 }
-.welcome .bars__kids a {
+.welcome .nav__Bar .bars__kids a {
   padding: calc(0.2rem + 1vw);
   color: rgba(243, 243, 243, 0.5);
   font-weight: 600;
 }
 @media (min-width: 40em) {
-  .welcome .bars__kids {
+  .welcome .nav__Bar .bars__kids {
     font-size: calc(0.5rem + 1.5vw);
   }
 }
-.welcome .checkbox {
+.welcome .nav__Bar .checkbox {
   display: none;
 }
-.welcome .checkbox:checked ~ label i {
+.welcome .nav__Bar .checkbox:checked ~ label i {
   display: none;
 }
-.welcome .checkbox:checked ~ .bars__parent .bars__kids {
+.welcome .nav__Bar .checkbox:checked ~ .bars__parent .bars__kids {
   display: flex;
 }
-.welcome .bars__parent:hover {
+.welcome .nav__Bar .bars__parent:hover {
   cursor: pointer;
 }
 .welcome .main {
@@ -831,13 +831,39 @@ body {
 }
 .aboutMe .goHome {
   position: absolute;
-  bottom: 5%;
+  bottom: 3%;
   left: 50%;
   transform: translateX(-50%);
 }
+@media (min-width: 40em) {
+  .aboutMe .goHome {
+    bottom: 5%;
+  }
+}
+@media (min-width: 60em) {
+  .aboutMe .goHome {
+    bottom: 7%;
+  }
+}
 .aboutMe .goHome a {
-  background-color: rgba(243, 243, 243, 0.5);
-  padding: 0.5rem 3rem;
+  background-color: transparent;
+  padding: 0.5rem 2rem;
+  border: 2px solid white;
+  border-radius: 0.3333333333rem;
+  color: rgba(243, 243, 243, 0.5);
+  font-weight: 900;
+  font-size: 0.8rem;
+  box-shadow: 0 0 5px rgba(243, 243, 243, 0.5), inset 0 0 5px rgba(243, 243, 243, 0.5);
+}
+@media (min-width: 40em) {
+  .aboutMe .goHome a {
+    padding: 0.5rem 3rem;
+  }
+}
+@media (min-width: 60em) {
+  .aboutMe .goHome a {
+    padding: 0.5rem 5rem;
+  }
 }
 
 .contactMe {
@@ -940,9 +966,39 @@ body {
 }
 .contactMe .goHome {
   position: absolute;
-  bottom: 5%;
+  bottom: 3%;
   left: 50%;
   transform: translateX(-50%);
+}
+@media (min-width: 40em) {
+  .contactMe .goHome {
+    bottom: 5%;
+  }
+}
+@media (min-width: 60em) {
+  .contactMe .goHome {
+    bottom: 7%;
+  }
+}
+.contactMe .goHome a {
+  background-color: transparent;
+  padding: 0.5rem 2rem;
+  border: 2px solid white;
+  border-radius: 0.3333333333rem;
+  color: rgba(243, 243, 243, 0.5);
+  font-weight: 900;
+  font-size: 0.8rem;
+  box-shadow: 0 0 5px rgba(243, 243, 243, 0.5), inset 0 0 5px rgba(243, 243, 243, 0.5);
+}
+@media (min-width: 40em) {
+  .contactMe .goHome a {
+    padding: 0.5rem 3rem;
+  }
+}
+@media (min-width: 60em) {
+  .contactMe .goHome a {
+    padding: 0.5rem 5rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

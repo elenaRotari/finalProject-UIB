@@ -1,16 +1,15 @@
 @use "./var";
 
-@mixin position-center($text-align: center) {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-  text-align: $text-align;
-}
-
 .loading-text {
+  @mixin position-center($text-align: center) {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    text-align: $text-align;
+  }
   @include position-center;
   width: 100%;
   height: 100px;
@@ -39,7 +38,7 @@
     font-family: "Roboto", sans-serif;
     color: white;
     padding: calc(var.$spacer * 0.5) calc(var.$spacer * 3);
-    font-size: 2em;
+    font-size: calc(var.$spacer/2 + 1vw);
     border-radius: 5px;
     opacity: 0.5;
     margin: 0 auto;
@@ -55,13 +54,12 @@
       box-shadow: 0 8px 15px 0 rgba(255, 255, 255, 0.5);
     }
   }
-}
-
-@keyframes blur-text {
-  0% {
-    filter: blur(0px);
-  }
-  100% {
-    filter: blur(4px);
+  @keyframes blur-text {
+    0% {
+      filter: blur(0px);
+    }
+    100% {
+      filter: blur(4px);
+    }
   }
 }

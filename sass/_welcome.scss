@@ -7,59 +7,59 @@
     justify-content: space-between;
     margin: 0 1rem;
     margin-bottom: var.$spacer;
-  }
-
-  .nav_Bar--img {
-    width: calc(var.$spacer * 8);
-    @media (min-width: 40em) {
-      width: calc(var.$spacer * 9);
+    .nav_Bar--img {
+      width: calc(var.$spacer * 8);
+      @media (min-width: 40em) {
+        width: calc(var.$spacer * 9);
+      }
+      @media (min-width: 60em) {
+        width: calc(var.$spacer * 10);
+      }
     }
-    @media (min-width: 60em) {
-      width: calc(var.$spacer * 10);
-    }
-  }
-  .fa-bars {
-    color: var.$color;
-    font-size: calc(var.$spacer * 2);
-    padding-right: calc(var.$spacer * 2);
+    .fa-bars {
+      color: var.$color;
+      font-size: calc(var.$spacer * 2);
+      padding-right: calc(var.$spacer * 2);
 
-    @media (min-width: 40em) {
+      @media (min-width: 40em) {
+        display: none;
+      }
+    }
+    .bars__parent {
+      position: relative;
+    }
+    .bars__kids {
+      display: none;
+      list-style-type: none;
+
+      @media (min-width: 40em) {
+        display: flex;
+      }
+      a {
+        padding: calc(0.2rem + 1vw);
+        color: var.$color;
+        font-weight: 600;
+      }
+      @media (min-width: 40em) {
+        font-size: calc(var.$spacer / 2 + 1.5vw);
+      }
+    }
+    .checkbox {
       display: none;
     }
-  }
-  .bars__parent {
-    position: relative;
-  }
-  .bars__kids {
-    display: none;
-    list-style-type: none;
-
-    @media (min-width: 40em) {
+    .checkbox:checked ~ label i {
+      display: none;
+    }
+    .checkbox:checked ~ .bars__parent .bars__kids {
       display: flex;
     }
-    a {
-      padding: calc(0.2rem + 1vw);
-      color: var.$color;
-      font-weight: 600;
-    }
-    @media (min-width: 40em) {
-      font-size: calc(var.$spacer / 2 + 1.5vw);
+    .bars__parent {
+      &:hover {
+        cursor: pointer;
+      }
     }
   }
-  .checkbox {
-    display: none;
-  }
-  .checkbox:checked ~ label i {
-    display: none;
-  }
-  .checkbox:checked ~ .bars__parent .bars__kids {
-    display: flex;
-  }
-  .bars__parent {
-    &:hover {
-      cursor: pointer;
-    }
-  }
+
   .main {
     display: flex;
     flex-direction: column;
