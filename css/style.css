@@ -638,11 +638,6 @@ body {
   gap: 4rem;
   padding: calc(1rem + 3vw);
 }
-@media (min-width: 40em) {
-  .welcome .main .main__middleBlock {
-    gap: 7rem;
-  }
-}
 @media (min-width: 60em) {
   .welcome .main .main__middleBlock {
     grid-template-columns: 2fr 4fr;
@@ -700,12 +695,6 @@ body {
   align-items: center;
   gap: 1rem;
   width: 100%;
-  margin-top: 150px;
-}
-@media (min-width: 40em) {
-  .welcome .main .footer__icon {
-    margin-top: 300px;
-  }
 }
 .welcome .main .footer__icon a {
   color: rgba(243, 243, 243, 0.5);
