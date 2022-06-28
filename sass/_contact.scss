@@ -104,11 +104,13 @@
 
   .goHome {
     position: absolute;
-    bottom: 3%;
-    left: 50%;
-    transform: translateX(-50%);
+    display: none;
+
     @media (min-width: 40em) {
       bottom: 5%;
+      left: 50%;
+      transform: translateX(-50%);
+      display: block;
     }
 
     a {

@@ -24,7 +24,6 @@ body {
 .contactMe {
   height: 100vh;
   width: 100%;
-  border-top: 1px solid white;
   background: rgb(131, 128, 130);
   background: rgb(91, 88, 90);
   background: radial-gradient(circle, rgb(91, 88, 90) 0%, rgb(0, 0, 0) 100%);
@@ -828,13 +827,14 @@ body {
 }
 .aboutMe .goHome {
   position: absolute;
-  bottom: 3%;
-  left: 50%;
-  transform: translateX(-50%);
+  display: none;
 }
 @media (min-width: 40em) {
   .aboutMe .goHome {
     bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
   }
 }
 .aboutMe .goHome a {
@@ -958,13 +958,14 @@ body {
 }
 .contactMe .goHome {
   position: absolute;
-  bottom: 3%;
-  left: 50%;
-  transform: translateX(-50%);
+  display: none;
 }
 @media (min-width: 40em) {
   .contactMe .goHome {
     bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
   }
 }
 .contactMe .goHome a {
