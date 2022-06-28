@@ -309,8 +309,11 @@
     .main__middleBlock {
       display: grid;
       place-items: center;
-      gap: var.$spacer;
+      gap: calc(var.$spacer * 4);
       padding: calc(var.$spacer + 3vw);
+      @media (min-width: 40em) {
+        gap: calc(var.$spacer * 7);
+      }
       @media (min-width: 60em) {
         grid-template-columns: 2fr 4fr;
       }
@@ -363,6 +366,10 @@
       align-items: center;
       gap: var.$spacer;
       width: 100%;
+      margin-top: 150px;
+      @media (min-width: 40em) {
+        margin-top: 300px;
+      }
 
       a {
         color: var.$color;

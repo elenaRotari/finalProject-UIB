@@ -635,8 +635,13 @@ body {
 .welcome .main .main__middleBlock {
   display: grid;
   place-items: center;
-  gap: 1rem;
+  gap: 4rem;
   padding: calc(1rem + 3vw);
+}
+@media (min-width: 40em) {
+  .welcome .main .main__middleBlock {
+    gap: 7rem;
+  }
 }
 @media (min-width: 60em) {
   .welcome .main .main__middleBlock {
@@ -695,6 +700,12 @@ body {
   align-items: center;
   gap: 1rem;
   width: 100%;
+  margin-top: 150px;
+}
+@media (min-width: 40em) {
+  .welcome .main .footer__icon {
+    margin-top: 300px;
+  }
 }
 .welcome .main .footer__icon a {
   color: rgba(243, 243, 243, 0.5);
@@ -818,7 +829,7 @@ body {
 .aboutMe .aboutMe__block .middle__block img {
   display: none;
   position: absolute;
-  width: min(40%, 370px);
+  width: min(40%, 350px);
   filter: saturate(0);
   top: 69%;
   left: 50%;
@@ -838,11 +849,6 @@ body {
 @media (min-width: 40em) {
   .aboutMe .goHome {
     bottom: 5%;
-  }
-}
-@media (min-width: 60em) {
-  .aboutMe .goHome {
-    bottom: 7%;
   }
 }
 .aboutMe .goHome a {
@@ -973,11 +979,6 @@ body {
 @media (min-width: 40em) {
   .contactMe .goHome {
     bottom: 5%;
-  }
-}
-@media (min-width: 60em) {
-  .contactMe .goHome {
-    bottom: 7%;
   }
 }
 .contactMe .goHome a {
