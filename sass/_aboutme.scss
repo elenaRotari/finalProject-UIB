@@ -25,9 +25,9 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        padding: calc(var.$spacer + 3vw);
+        padding: calc(var.$spacer/2 + 3vw);
 
-        gap: calc(var.$spacer + 2vw);
+        gap: calc(var.$spacer + 1.2vw);
         width: 70%;
         h1 {
           font-size: calc(var.$spacer / 3 + 2vw);
@@ -85,9 +85,9 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        padding: calc(var.$spacer + 3vw);
+        padding: calc(var.$spacer/2 + 3vw);
 
-        gap: calc(var.$spacer + 2vw);
+        gap: calc(var.$spacer + 1.2vw);
         h1 {
           font-size: calc(var.$spacer + 1.2vw);
           font-weight: 800;
