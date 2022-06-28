@@ -638,7 +638,7 @@ body {
   gap: 1rem;
   padding: calc(1rem + 3vw);
 }
-@media (min-width: 40em) {
+@media (min-width: 60em) {
   .welcome .main .main__middleBlock {
     grid-template-columns: 2fr 4fr;
   }
@@ -649,7 +649,7 @@ body {
   object-fit: cover;
   transform: rotateY(180deg);
 }
-@media (min-width: 40em) {
+@media (min-width: 60em) {
   .welcome .main .main__middleBlock img {
     width: 100%;
   }
