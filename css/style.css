@@ -733,6 +733,7 @@ body {
   align-items: center;
   padding: calc(1rem + 3vw);
   gap: calc(1rem + 2vw);
+  width: 70%;
 }
 .aboutMe .aboutMe__block .grey__block .grey__flexBlock h1 {
   font-size: calc(0.3333333333rem + 2vw);
