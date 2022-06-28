@@ -407,7 +407,8 @@ body {
 .welcome .main {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
+  height: 70%;
 }
 .welcome .main .main__welcomeText {
   display: none;
@@ -694,6 +695,7 @@ body {
   align-items: center;
   gap: 1rem;
   width: 100%;
+  flex: 1;
 }
 .welcome .main .footer__icon a {
   color: rgba(243, 243, 243, 0.5);

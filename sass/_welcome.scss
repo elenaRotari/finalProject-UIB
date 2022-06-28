@@ -63,8 +63,8 @@
   .main {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-
+    justify-content: space-around;
+    height: 70%;
     .main__welcomeText {
       display: none;
       padding: calc(var.$spacer + 2vw);
@@ -364,7 +364,7 @@
       align-items: center;
       gap: var.$spacer;
       width: 100%;
-
+      flex: 1;
       a {
         color: var.$color;
         font-size: calc(var.$spacer + 1.5vw);
