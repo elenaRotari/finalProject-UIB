@@ -731,9 +731,8 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: calc(0.5rem + 3vw);
-  gap: calc(0.3333333333rem + 1.2vw);
-  width: 70%;
+  padding: calc(1rem + 3vw);
+  gap: calc(1rem + 2vw);
 }
 .aboutMe .aboutMe__block .grey__block .grey__flexBlock h1 {
   font-size: calc(0.3333333333rem + 2vw);
@@ -789,7 +788,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: calc(0.5rem + 3vw);
+  padding: calc(1rem + 3vw);
   gap: calc(1rem + 2vw);
 }
 .aboutMe .aboutMe__block .darkgrey__block .darkgrey__flexBlock h1 {
