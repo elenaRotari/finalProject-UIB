@@ -891,6 +891,7 @@ body {
 .contactMe .contactMe__block .white__block {
   background-color: whitesmoke;
   display: flex;
+  height: 70%;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -930,8 +931,22 @@ body {
 .contactMe .contactMe__block .white__block .white__flexBlock .row input,
 .contactMe .contactMe__block .white__block .white__flexBlock .row select,
 .contactMe .contactMe__block .white__block .white__flexBlock .row textarea {
-  padding: 0.8em;
+  padding: 0.2rem;
   width: 100%;
+}
+@media (min-width: 40em) {
+  .contactMe .contactMe__block .white__block .white__flexBlock .row input,
+.contactMe .contactMe__block .white__block .white__flexBlock .row select,
+.contactMe .contactMe__block .white__block .white__flexBlock .row textarea {
+    padding: 0.5rem;
+  }
+}
+@media (min-width: 60em) {
+  .contactMe .contactMe__block .white__block .white__flexBlock .row input,
+.contactMe .contactMe__block .white__block .white__flexBlock .row select,
+.contactMe .contactMe__block .white__block .white__flexBlock .row textarea {
+    padding: 0.8rem;
+  }
 }
 .contactMe .contactMe__block .white__block .white__flexBlock .row input:focus,
 .contactMe .contactMe__block .white__block .white__flexBlock .row select:focus,

@@ -35,6 +35,7 @@
     .white__block {
       background-color: whitesmoke;
       display: flex;
+      height: 70%;
       flex-direction: column;
       justify-content: center;
       align-items: center;
@@ -43,6 +44,7 @@
       .white__flexBlock {
         display: flex;
         width: 100%;
+
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -71,8 +73,14 @@
           input,
           select,
           textarea {
-            padding: 0.8em;
+            padding: 0.2rem;
             width: 100%;
+            @media (min-width: 40em) {
+              padding: 0.5rem;
+            }
+            @media (min-width: 60em) {
+              padding: 0.8rem;
+            }
             &:focus {
               outline: none;
             }
