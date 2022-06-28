@@ -85,16 +85,16 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        padding: calc(var.$spacer/2 + 2vw);
+        padding: calc(var.$spacer/2 + 3vw);
 
-        gap: calc(var.$spacer + 1.2vw);
+        gap: calc(var.$spacer/3 + 1vw);
         h1 {
           font-size: calc(var.$spacer + 1.2vw);
           font-weight: 800;
           text-align: center;
         }
         p {
-          font-size: calc(var.$spacer/2 + 0.6vw);
+          font-size: calc(var.$spacer/2 + 0.8vw);
           text-align: center;
           .will {
             text-decoration: line-through;

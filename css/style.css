@@ -789,8 +789,8 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: calc(0.5rem + 2vw);
-  gap: calc(1rem + 1.2vw);
+  padding: calc(0.5rem + 3vw);
+  gap: calc(0.3333333333rem + 1vw);
 }
 .aboutMe .aboutMe__block .darkgrey__block .darkgrey__flexBlock h1 {
   font-size: calc(1rem + 1.2vw);
@@ -798,7 +798,7 @@ body {
   text-align: center;
 }
 .aboutMe .aboutMe__block .darkgrey__block .darkgrey__flexBlock p {
-  font-size: calc(0.5rem + 0.6vw);
+  font-size: calc(0.5rem + 0.8vw);
   text-align: center;
 }
 .aboutMe .aboutMe__block .darkgrey__block .darkgrey__flexBlock p .will {
